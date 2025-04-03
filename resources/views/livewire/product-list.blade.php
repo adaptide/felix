@@ -1,14 +1,14 @@
 <div>
     <div class="space-y-6">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-            <h1 class="text-3xl font-bold tracking-tight">Our Collection</h1>
+            <h1 class="text-3xl font-bold tracking-tight">ProductsS</h1>
             <div class="w-full md:w-1/3 relative">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">
                     <circle cx="11" cy="11" r="8"/>
                     <path d="m21 21-4.3-4.3"/>
                 </svg>
                 <input
-                    wire:model.debounce.300ms="search"
+                wire:model.live.debounce.250ms="search"
                     type="text"
                     placeholder="Search products..."
                     class="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-input bg-background"
@@ -16,11 +16,11 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-6">
             @forelse ($products as $product)
                 <div class="group bg-card rounded-lg overflow-hidden border hover:shadow-md transition-all duration-300">
                     <div class="aspect-square overflow-hidden bg-muted">
-                        <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     </div>
                     <div class="p-6">
                         <h3 class="font-medium text-lg mb-2 line-clamp-1">{{ $product->name }}</h3>

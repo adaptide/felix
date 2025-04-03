@@ -1,7 +1,7 @@
 <div>
-    <div class="max-w-3xl mx-auto space-y-8">
+    <div class="max-w-3xl mx-auto space-y-8 py-8">
         <div class="bg-card border rounded-lg p-8 text-center">
-            <div class="mb-6">
+            <div class="mb-6 mt-8">
                 <div
                     class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -14,15 +14,15 @@
                 <p class="text-muted-foreground mt-2">Thank you for your purchase.</p>
             </div>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center mt-8 mb-6">
                 <a href="{{ route('products') }}"
-                    class="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                    class="bg-primary p-6 text-primary-foreground hover:bg-primary/90 px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                     Continue Shopping
                 </a>
             </div>
         </div>
 
-        <div class="bg-card border rounded-lg p-6">
+        <div class="bg-card border rounded-lg p-6 mt-8">
             <div class="flex items-center justify-between mb-6">
                 <h2 class="text-xl font-semibold">Order #{{ $order->id }}</h2>
                 <span class="text-sm text-muted-foreground">{{ $order->created_at->format('F j, Y') }}</span>
@@ -57,7 +57,7 @@
                         @foreach ($order->items as $item)
                             <div class="p-4 flex items-center gap-4">
                                 <div class="w-16 h-16 rounded-md overflow-hidden bg-muted flex-shrink-0">
-                                    <img src="{{ asset('images/' . $item->product?->image) }}"
+                                    <img src="{{ asset('storage/' . $item->product?->image) }}"
                                         alt="{{ $item->product?->name }}" class="w-full h-full object-cover">
                                 </div>
                                 <div class="flex-1 min-w-0">

@@ -20,7 +20,7 @@
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-4">
                                             <div class="w-16 h-16 rounded-md overflow-hidden bg-muted">
-                                                <img src="{{ asset('images/' . $item['image']) }}"
+                                                <img src="{{ asset('storage/' . $item['image']) }}"
                                                     alt="{{ $item['name'] }}" class="w-full h-full object-cover">
                                             </div>
                                             <span class="font-medium">{{ $item['name'] }}</span>

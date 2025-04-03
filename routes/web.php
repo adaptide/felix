@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire;
+use App\Livewire\Orders;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,9 +13,8 @@ Route::middleware(['auth'])->group(function () {
         return view('profile.edit');
     })->name('profile.edit');
 
-    Route::get('/orders', function () {
-        return view('orders.index');
-    })->name('orders');
+    Route::get('/orders', Orders\Index::class)->name('orders');
+    Route::get('/orders/{order}', Orders\Show::class)->name('orders.show');
 });
 
 Route::get('/products', Livewire\ProductList::class)->name('products');

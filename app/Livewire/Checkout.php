@@ -21,7 +21,7 @@ class Checkout extends Component
 
     protected $rules = [
         'name' => 'required|min:3',
-        'email' => 'required',
+        'email' => 'required|email:dns',
         'address' => 'required|min:5',
         'city' => 'required',
         'state' => 'required',

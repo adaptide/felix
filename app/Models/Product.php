@@ -19,4 +19,8 @@ class Product extends Model
             $category->slug = Str::slug($category->name);
         });
     }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
