@@ -8,6 +8,7 @@
         <div class="space-y-4">
             <div class="grid grid-cols-1 gap-2">
                 <button
+                    disabled
                     wire:click="steamRegister"
                     type="button"
                     class="flex items-center justify-center gap-2 bg-card hover:bg-muted border border-input px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"

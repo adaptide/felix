@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Filament\Forms\Components\Builder;
 use Filament\Models\Contracts\FilamentUser;

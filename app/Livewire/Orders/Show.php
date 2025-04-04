@@ -11,7 +11,6 @@ class Show extends Component
 
     public function mount(Order $order)
     {
-        // Ensure the user can only view their own orders
         if ($order->user_id !== auth()->id()) {
             abort(403);
         }

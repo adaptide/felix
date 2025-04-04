@@ -133,7 +133,6 @@ class OrderResource extends Resource
     static function infolist(Infolist $infolist): Infolist
     {
         return $infolist
-
             ->schema([
                 InfolistComponents\TextEntry::make('id')
                     ->size('xxl')
