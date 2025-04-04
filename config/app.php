@@ -14,7 +14,19 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-    'domain' => env('APP_DOMAIN', 'localhost'),
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Domain
+    |--------------------------------------------------------------------------
+    |
+    | This value is the domain of your application, which will be used when the
+    | framework needs to place the application's domain in a notification or
+    | other UI elements where an application domain needs to be displayed.
+    |
+    */
+    'domain' => env('APP_DOMAIN', 'gmail.com'),
     /*
     |--------------------------------------------------------------------------
     | Application Environment
